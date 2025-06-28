@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="app.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2278"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="course" custom_title="0" dock_id="4" table="4,6:maincourse"/><dock_state state="000000ff00000000fd00000001000000020000043c000002b6fc0100000002fb000000160064006f0063006b00420072006f007700730065003101000000000000043c0000000000000000fb000000160064006f0063006b00420072006f007700730065003401000000000000043c0000011800ffffff0000043c0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="course" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="0"/></sort><column_widths><column index="1" value="67"/><column index="2" value="86"/><column index="3" value="81"/><column index="4" value="84"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="enroll_details" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="67"/><column index="2" value="56"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">-- Table: course
+CREATE TABLE course (
+    Course_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Course_Name VARCHAR(30),
+    Course_Desp VARCHAR(200)
+);
+
+-- Table: enroll_details
+CREATE TABLE enroll_details (
+    Course_ID INTEGER NOT NULL,
+    Email_id VARCHAR(255) NOT NULL
+);
+
+-- Table: prof_details
+CREATE TABLE prof_details (
+    User_Name VARCHAR(30),
+    Email_id VARCHAR(30),
+    Password VARCHAR(30)
+);
+
+-- Table: user_details
+CREATE TABLE user_details (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    User_Name VARCHAR(30) UNIQUE,
+    Email_id VARCHAR(30) UNIQUE,
+    Password VARCHAR(30)
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
